@@ -1,0 +1,16 @@
+{% extends 'cinema/base.html' %}
+
+{% block content %}
+<h2>Сеансы</h2>
+
+{% for session in sessions %}
+<div class="session">
+    <p>
+        <b>{{ session.movie.title }}</b><br>
+        {{ session.start_time }}<br>
+        Зал: {{ session.hall.name }}
+    </p>
+    <a href="{% url 'buy_ticket' session.id %}">Купить билет</a>
+</div>
+{% endfor %}
+{% endblock %}

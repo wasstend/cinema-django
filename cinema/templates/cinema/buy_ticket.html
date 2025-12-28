@@ -1,0 +1,25 @@
+{% extends 'cinema/base.html' %}
+
+{% block content %}
+<h2>Покупка билета</h2>
+
+<p>
+    <b>{{ session.movie.title }}</b><br>
+    {{ session.start_time }}<br>
+    Зал: {{ session.hall.name }}
+</p>
+
+{% if taken_seats %}
+<p><b>Занятые места:</b> {{ taken_seats|join:", " }}</p>
+{% endif %}
+
+{% if error %}
+<p style="color:red">{{ error }}</p>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <input type="number" name="seat" min="1" max="{{ session.hall.seats }}" required>
+    <button type="submit">Купить</button>
+</form>
+{% endblock %}
