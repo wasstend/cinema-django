@@ -1,0 +1,112 @@
+[
+{
+  "model": "cinema.hall",
+  "pk": 1,
+  "fields": {
+    "name": "Большой зал",
+    "seats": 100
+  }
+},
+{
+  "model": "cinema.hall",
+  "pk": 2,
+  "fields": {
+    "name": "Малый зал",
+    "seats": 50
+  }
+},
+{
+  "model": "cinema.movie",
+  "pk": 1,
+  "fields": {
+    "title": "Зверополис 2",
+    "description": "Кролик-полицейский Джуди и лис Ник идут по следу загадочной рептилии, чьё прибытие в Зверополис переворачивает жизнь города с ног на голову. Чтобы раскрыть дело, Джуди и Ник вынуждены работать под прикрытием в разных районах города."
+  }
+},
+{
+  "model": "cinema.movie",
+  "pk": 2,
+  "fields": {
+    "title": "Иллюзия обмана 3",
+    "description": "«Четыре всадника» возвращаются вместе с молодым поколением иллюзионистов, демонстрируя головокружительные трюки, магию и превращения, каких еще не видел мир."
+  }
+},
+{
+  "model": "cinema.session",
+  "pk": 1,
+  "fields": {
+    "movie": 1,
+    "hall": 1,
+    "start_time": "2026-01-01T10:00:00Z"
+  }
+},
+{
+  "model": "cinema.session",
+  "pk": 2,
+  "fields": {
+    "movie": 1,
+    "hall": 1,
+    "start_time": "2026-01-01T14:00:00Z"
+  }
+},
+{
+  "model": "cinema.session",
+  "pk": 3,
+  "fields": {
+    "movie": 1,
+    "hall": 1,
+    "start_time": "2026-01-01T18:00:00Z"
+  }
+},
+{
+  "model": "cinema.session",
+  "pk": 4,
+  "fields": {
+    "movie": 2,
+    "hall": 2,
+    "start_time": "2026-01-01T10:00:00Z"
+  }
+},
+{
+  "model": "cinema.session",
+  "pk": 5,
+  "fields": {
+    "movie": 2,
+    "hall": 1,
+    "start_time": "2026-01-01T22:00:00Z"
+  }
+},
+{
+  "model": "cinema.session",
+  "pk": 6,
+  "fields": {
+    "movie": 2,
+    "hall": 2,
+    "start_time": "2026-01-01T14:00:00Z"
+  }
+},
+{
+  "model": "cinema.ticket",
+  "pk": 1,
+  "fields": {
+    "session": 1,
+    "seat_number": 9
+  }
+},
+{
+  "model": "cinema.ticket",
+  "pk": 2,
+  "fields": {
+    "session": 1,
+    "seat_number": 7
+  }
+},
+{
+  "model": "cinema.ticket",
+  "pk": 3,
+  "fields": {
+    "session": 1,
+    "seat_number": 3
+  }
+}
+]
